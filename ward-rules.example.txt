@@ -1,0 +1,17 @@
+# Ward rules — SANITIZED EXAMPLE. Copy to ward-rules.txt and add REAL patterns.
+# ward-rules.txt is gitignored: your real rules are themselves sensitive.
+# Plain line = case-insensitive substring. re: prefix = regex.
+
+# Employer / org names and abbreviations
+ExampleCorp
+re:ex(ample)?-?corp
+
+# Internal hostnames & domains
+.corp.example.com
+EXCORP-DC01
+
+# Internal IP ranges (example: a specific /16 your employer uses)
+re:\b172\.31\.\d{1,3}\.\d{1,3}\b
+
+# People / accounts that identify the org
+jdoe@example.com
